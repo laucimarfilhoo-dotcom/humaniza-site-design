@@ -26,8 +26,6 @@ function Index() {
   ];
   return <>
     <section className="relative min-h-[calc(100svh-4.5rem)] bg-primary text-primary-foreground md:min-h-[760px]">
-      <img src={hero} alt="Paciente tranquila em um ambiente de cuidado odontológico acolhedor" width={1280} height={1600} fetchPriority="high" className="absolute inset-0 size-full object-cover object-[center_30%] opacity-55 md:object-[center_34%]" />
-      <div className="absolute inset-0 bg-primary/35" />
       <div className="relative mx-auto flex min-h-[calc(100svh-4.5rem)] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:min-h-[760px] md:px-8 md:pb-24">
         <div className="max-w-3xl reveal-up"><p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-primary-foreground/80">Odontologia gentil em Fortaleza</p><h1 className="text-5xl leading-[0.92] md:text-7xl lg:text-8xl">Seu sorriso cuidado com leveza, gentileza e tempo.</h1><p className="mt-7 max-w-xl text-base leading-7 text-primary-foreground/85 md:text-lg">Uma odontologia preventiva e acolhedora, para você se sentir seguro em cada etapa — da limpeza ao cuidado contínuo.</p><div className="mt-8 flex flex-wrap gap-3"><Button asChild size="xl" variant="warm"><a href={bookingUrl} target="_blank" rel="noreferrer">Agendar minha consulta <ArrowRight /></a></Button><Button asChild size="xl" variant="outline" className="border-primary-foreground/40 bg-primary/10 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"><a href="#conheca">Conhecer a Humaniza <ArrowDown /></a></Button></div></div>
       </div>
