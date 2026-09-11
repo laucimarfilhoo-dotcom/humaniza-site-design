@@ -27,7 +27,7 @@ function Index() {
   ];
   return <>
     <section className="relative bg-cream text-primary">
-      <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-5 py-16 md:px-8 md:py-24">
+      <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-5 py-12 md:px-8 md:py-20">
         <div className="max-w-3xl reveal-up"><p className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-primary/70">Odontologia gentil em Fortaleza</p><h1 className="text-4xl leading-[0.95] md:text-6xl lg:text-7xl">Seu sorriso cuidado com leveza, gentileza e tempo.</h1><p className="mt-5 max-w-xl text-base leading-7 text-primary/80 md:text-lg">Uma odontologia humanizada que vai além dos procedimentos: começa pela escuta, pelo entendimento da sua história e pelo planejamento de um cuidado que faça sentido para a sua realidade.</p><div className="mt-7 flex flex-wrap gap-3"><Button asChild size="lg"><a href={bookingUrl} target="_blank" rel="noreferrer">Agendar minha consulta <ArrowRight /></a></Button><Button asChild size="lg" variant="outline" className="border-primary/30 bg-cream text-primary hover:bg-primary/10 hover:text-primary"><a href="#conheca">Conhecer a Humaniza <ArrowDown /></a></Button></div></div>
       </div>
     </section>
