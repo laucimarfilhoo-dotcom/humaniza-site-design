@@ -1,0 +1,15 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Check } from "lucide-react";
+import { FinalCta, PageIntro } from "@/components/page-elements";
+
+export const Route = createFileRoute("/servicos")({ head: () => ({ meta: [
+  { title: "Serviços Odontológicos | Humaniza Fortaleza" }, { name: "description", content: "Limpeza dental, prevenção, clareamento, cuidado para bruxismo e estética odontológica na Aldeota, Fortaleza." },
+  { property: "og:title", content: "Serviços | Humaniza Clínica" }, { property: "og:description", content: "Cuidado odontológico preventivo e personalizado em Fortaleza." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
+] }), component: Servicos });
+const items=[
+  ["Prevenção & limpeza odontológica","Uma avaliação atenta e uma limpeza cuidadosa para remover acúmulos, acompanhar sua saúde bucal e prevenir problemas.",["Avaliação individual","Orientação de higiene","Plano de acompanhamento"]],
+  ["Clareamento dental","Planejamento personalizado para iluminar o sorriso com segurança, considerando seus hábitos, objetivos e sensibilidade.",["Análise do seu sorriso","Expectativas alinhadas","Acompanhamento profissional"]],
+  ["Cuidado para bruxismo","Investigação dos sinais de apertamento ou ranger dos dentes, com orientações para proteger estruturas e aliviar desconfortos.",["Avaliação de sinais","Proteção do sorriso","Cuidado contínuo"]],
+  ["Estética odontológica","Decisões sutis e conscientes para harmonizar o sorriso sem apagar sua naturalidade. A indicação depende de avaliação clínica.",["Planejamento individual","Resultados naturais","Abordagem conservadora"]],
+];
+function Servicos(){return <><PageIntro eyebrow="Serviços" title="Cada sorriso pede um plano só seu." text="Da prevenção à estética, nossas escolhas partem da escuta, de uma avaliação cuidadosa e do respeito ao que você realmente precisa."/><section><div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28"><div className="space-y-4">{items.map(([title,text,points],i)=><article key={title as string} className="grid gap-6 border-b border-border py-10 md:grid-cols-[80px_0.8fr_1.2fr] md:gap-10"><span className="font-display text-3xl text-earth">0{i+1}</span><h2 className="text-3xl text-primary md:text-4xl">{title as string}</h2><div><p className="leading-7 text-muted-foreground">{text as string}</p><ul className="mt-5 grid gap-2 sm:grid-cols-3">{(points as string[]).map(p=><li className="flex items-center gap-2 text-xs font-semibold text-ink-soft" key={p}><Check className="size-4 text-sage"/>{p}</li>)}</ul></div></article>)}</div><p className="mt-8 text-sm text-muted-foreground">A indicação de qualquer tratamento depende de avaliação presencial e pode variar de pessoa para pessoa.</p></div></section><FinalCta title="Qual cuidado faz sentido para você agora?"/></>}
