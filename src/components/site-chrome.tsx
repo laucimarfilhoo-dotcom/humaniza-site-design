@@ -13,17 +13,17 @@ export const bookingUrl = "https://linktr.ee/humanizaodontofortaleza";
 export function SiteChrome({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   return <div className="min-h-screen overflow-x-hidden bg-background">
-    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-primary-foreground/15 bg-primary/95 text-primary-foreground backdrop-blur-md">
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
         <Link to="/" aria-label="Humaniza Clínica — início"><BrandMark /></Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegação principal">
-          {nav.map(([label, to]) => <Link key={to} to={to} className="text-sm text-ink-soft transition-colors hover:text-primary" activeProps={{ className: "text-primary font-semibold" }}>{label}</Link>)}
+          {nav.map(([label, to]) => <Link key={to} to={to} className="text-sm text-primary-foreground/75 transition-colors hover:text-primary-foreground" activeProps={{ className: "text-primary-foreground font-semibold" }}>{label}</Link>)}
         </nav>
-        <div className="hidden lg:block"><Button asChild size="lg"><a href={bookingUrl} target="_blank" rel="noreferrer">Agendar consulta</a></Button></div>
-        <Button variant="ghost" size="icon" className="lg:hidden" aria-label={open ? "Fechar menu" : "Abrir menu"} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</Button>
+        <div className="hidden lg:block"><Button asChild size="lg" variant="warm"><a href={bookingUrl} target="_blank" rel="noreferrer">Agendar consulta</a></Button></div>
+        <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground lg:hidden" aria-label={open ? "Fechar menu" : "Abrir menu"} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</Button>
       </div>
-      {open && <nav className="border-t border-border bg-background px-5 py-5 lg:hidden" aria-label="Menu móvel">
-        <div className="flex flex-col gap-1">{nav.map(([label, to]) => <Link key={to} to={to} onClick={() => setOpen(false)} className="border-b border-border/70 py-3 text-sm font-medium">{label}</Link>)}</div>
+      {open && <nav className="border-t border-primary-foreground/15 bg-primary px-5 py-5 lg:hidden" aria-label="Menu móvel">
+        <div className="flex flex-col gap-1">{nav.map(([label, to]) => <Link key={to} to={to} onClick={() => setOpen(false)} className="border-b border-primary-foreground/15 py-3 text-sm font-medium text-primary-foreground/85">{label}</Link>)}</div>
       </nav>}
     </header>
     <main>{children}</main>
