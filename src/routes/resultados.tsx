@@ -30,7 +30,7 @@ const testimonials = [
       "O carinho começa na plaquinha com meu nome sobre a mesa",
     body: [
       "Desde o primeiro olhar até o último cuidado, tudo transborda acolhimento. O carinho começa na plaquinha com meu nome sobre a mesa — um detalhe que faz toda a diferença e me fez sentir verdadeiramente bem-vinda.",
-      "Um atendimento assim dissipa qualquer medo, ansiedade ou desconforto, pois vem carregado de algo raro: afeto genuíno. Cada passo, cada toque das mãos seguras e gentis da Dra. Sandra e da Tainá revelam um cuidado que vai além da técnica — levam a um resultado que, além de espetacular, acalma e fortalece.",
+      "Um atendimento assim dissipa qualquer medo, ansiedade ou desconforto, pois vem carregado de algo raro: afeto genuíno. Cada passo, cada toque das mãos seguras e gentis da Dra. Sandra e da Taynã revelam um cuidado que vai além da técnica — levam a um resultado que, além de espetacular, acalma e fortalece.",
     ],
   },
   {
@@ -114,13 +114,13 @@ function Resultados() {
             {testimonials.map((item) => (
               <article
                 key={item.name}
-                className="flex flex-col rounded-3xl bg-background p-7 shadow-subtle"
+                className="flex flex-col rounded-3xl bg-background p-7 shadow-sm"
               >
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className="size-4 fill-warm text-warm"
+                      className="size-4 fill-earth text-earth"
                       aria-hidden="true"
                     />
                   ))}
