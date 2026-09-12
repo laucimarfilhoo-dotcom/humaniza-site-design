@@ -182,8 +182,39 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@utility float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+@utility float-delayed {
+  animation: float-delayed 10s ease-in-out infinite;
+}
+
+@utility drift {
+  animation: drift 12s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(5px, -8px); }
+  66% { transform: translate(-5px, 4px); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal-up { animation: none; }
+  .float-slow { animation: none; }
+  .float-delayed { animation: none; }
+  .drift { animation: none; }
   * { scroll-behavior: auto !important; }
 }
 
