@@ -8,7 +8,7 @@ const nav = [
   ["Sobre", "/sobre"], ["Serviços", "/servicos"], ["Resultados", "/resultados"],
   ["Home Care", "/home-care"], ["Contato", "/contato"],
 ] as const;
-export const bookingUrl = "https://linktr.ee/humanizaodontofortaleza";
+export const bookingUrl = "https://wa.me/5585928818015?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Humaniza%20Cl%C3%ADnica%20e%20gostaria%20de%20agendar%20uma%20consulta.%20Pode%20me%20ajudar%3F%20%F0%9F%98%8A";
 
 export function SiteChrome({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
