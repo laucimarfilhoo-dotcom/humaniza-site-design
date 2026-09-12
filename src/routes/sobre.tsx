@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import clinic from "@/assets/humaniza-consultorio.jpg";
+const clinic = "/humaniza-consultorio.jpg";
 import { FramedImage } from "@/components/framed-image";
 import { FinalCta, PageIntro, SectionTitle } from "@/components/page-elements";
 
