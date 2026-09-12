@@ -34,10 +34,10 @@ const testimonials = [
     ],
   },
   {
-    name: "Yvie",
-    highlight: "Graças a você perdi o medo",
+    name: "Anna Karine",
+    highlight: "Pessoas como você fazem muita diferença",
     body: [
-      "Estou muito feliz que encontrei minha dentista! Falo pra todo mundo que graças a você perdi o medo. Gratidão!",
+      "Fiz essa foto porque quero compartilhar aqui o quão maravilhoso é o atendimento da Dra. Sandra. Fazer o tratamento de prevenção com ela foi uma das melhores escolhas que eu fiz. Sem dúvidas é uma das melhores profissionais que já conheci na vida. Ela é um amor, é muito atenciosa, bastante didática, explica tudo direitinho e trabalha excelentemente bem! Muito obrigada, Sandra! Pessoas como você fazem muita diferença.",
     ],
   },
   {
