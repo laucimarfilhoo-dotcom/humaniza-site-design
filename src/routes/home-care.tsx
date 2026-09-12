@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import homecare from "@/assets/humaniza-homecare.jpg";
+const homecare = "/humaniza-homecare.jpg";
 import { FramedImage } from "@/components/framed-image";
 import { FinalCta, PageIntro, SectionTitle } from "@/components/page-elements";
 export const Route=createFileRoute("/home-care")({head:()=>({meta:[{title:"Home Care e Saúde Bucal | Humaniza Clínica"},{name:"description",content:"Orientações simples sobre higiene, prevenção e cuidados com o sorriso no dia a dia, por Humaniza Clínica Fortaleza."},{property:"og:title",content:"Home Care | Humaniza Clínica"},{property:"og:description",content:"Pequenos hábitos que ajudam a cuidar do sorriso todos os dias."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:HomeCare});

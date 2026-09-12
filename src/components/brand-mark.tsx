@@ -1,10 +1,10 @@
-import logoAsset from "@/assets/humaniza-logo.png.asset.json";
+const logoUrl = "/humaniza-logo.png";
 
 export function BrandMark({ compact = false }: { compact?: boolean }) {
   return (
     <span className="inline-flex items-center">
       <img
-        src={logoAsset.url}
+        src={logoUrl}
         alt="Humaniza Odontologia"
         width={1624}
         height={656}
