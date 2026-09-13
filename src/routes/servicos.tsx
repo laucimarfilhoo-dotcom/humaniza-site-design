@@ -6,20 +6,77 @@ export const Route = createFileRoute("/servicos")({ head: () => ({ meta: [
   { title: "Serviços Odontológicos | Humaniza Fortaleza" }, { name: "description", content: "Prevenção, limpeza, clareamento, estética, ortodontia, implantes, cirurgias, reabilitação oral e atendimento domiciliar na Aldeota, Fortaleza." },
   { property: "og:title", content: "Serviços | Humaniza Clínica" }, { property: "og:description", content: "Cuidado odontológico completo, preventivo e personalizado em Fortaleza." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
 ] }), component: Servicos });
-const items=[
-  ["Prevenção inteligente","Acompanhamento contínuo para manter sua saúde bucal em dia, identificar sinais antes que virem problemas e construir hábitos que protegem seu sorriso.",["Avaliação periódica","Orientação personalizada","Plano de cuidado contínuo"]],
-  ["Limpeza odontológica","Remoção suave de acúmulos e tártaro com atenção ao seu conforto, deixando a boca mais saudável e o sorriso mais leve.",["Técnica cuidadosa","Conforto durante o procedimento","Manutenção da saúde gengival"]],
-  ["Clareamento dental","Iluminação do sorriso com planejamento individual, respeito à sensibilidade dos seus dentes e acompanhamento para resultados naturais.",["Análise do seu sorriso","Expectativas alinhadas","Acompanhamento profissional"]],
-  ["Bruxismo","Avaliação dos sinais de apertamento ou ranger dos dentes, com orientações e proteções para aliviar desconfortos e preservar suas estruturas.",["Avaliação de sinais","Proteção do sorriso","Cuidado contínuo"]],
-  ["Disfunção da ATM","Investigação cuidadosa dos desconfortos na articulação da mandíbula, buscando entender causas e indicar o melhor caminho para mais qualidade de vida.",["Avaliação especializada","Planejamento individual","Acompanhamento da evolução"]],
-  ["Facetas em resina e estética dental","Transformações sutis que respeitam a naturalidade do seu sorriso, com decisões conscientes e indicação baseada em avaliação clínica.",["Planejamento individual","Resultados naturais","Abordagem conservadora"]],
-  ["Próteses e reabilitação oral","Recuperação da função e estética do sorriso com soluções personalizadas, respeitando seu ritmo e suas necessidades.",["Avaliação completa","Soluções personalizadas","Acompanhamento pós-procedimento"]],
-  ["Cirurgias e implantes","Procedimentos cirúrgicos conduzidos com planejamento, explicação clara de cada etapa e cuidado para que você se sinta seguro.",["Planejamento detalhado","Explicação de cada etapa","Acompanhamento pós-cirúrgico"]],
-  ["Restaurações","Reparo de dentes com atenção à estética e à função, usando materiais e técnicas que buscam um resultado discreto e duradouro.",["Avaliação do dente afetado","Materiais de qualidade","Acabamento natural"]],
-  ["Ortodontia","Alinhamento do sorriso com acompanhamento regular, explicação das etapas e respeito ao tempo do seu tratamento.",["Avaliação ortodôntica","Planejamento do tratamento","Acompanhamento periódico"]],
-  ["Alinhador invisível","Opção discreta para quem busca corrigir a posição dos dentes com mais liberdade visual e conforto no dia a dia.",["Avaliação de viabilidade","Planejamento digital","Acompanhamento do progresso"]],
-  ["Odontologia do sono (ronco e apneia)","Avaliação de sinais de ronco e apneia, com orientações e dispositivos que podem melhorar sua respiração e qualidade de sono.",["Avaliação dos sinais","Indicação de dispositivos","Acompanhamento da adaptação"]],
-  ["Harmonização facial","Procedimentos estéticos minimamente invasivos para valorizar seus traços de forma natural, sempre com indicação individualizada.",["Avaliação facial","Indicação personalizada","Resultados sutis"]],
-  ["Atendimento odontológico domiciliar","Cuidado odontológico no conforto da sua casa para quem tem dificuldade de deslocamento ou prefere ser atendido em ambiente familiar.",["Atendimento humanizado","Conforto do lar","Agendamento flexível"]],
+
+const items = [
+  ["Prevenção inteligente", "Acompanhamento contínuo para manter sua saúde bucal em dia, identificar sinais antes que virem problemas e construir hábitos que protegem seu sorriso.", ["Avaliação periódica", "Orientação personalizada", "Plano de cuidado contínuo"]],
+  ["Limpeza odontológica", "Remoção suave de acúmulos e tártaro com atenção ao seu conforto, deixando a boca mais saudável e o sorriso mais leve.", ["Técnica cuidadosa", "Conforto durante o procedimento", "Manutenção da saúde gengival"]],
+  ["Clareamento dental", "Iluminação do sorriso com planejamento individual, respeito à sensibilidade dos seus dentes e acompanhamento para resultados naturais.", ["Análise do seu sorriso", "Expectativas alinhadas", "Acompanhamento profissional"]],
+  ["Bruxismo", "Avaliação dos sinais de apertamento ou ranger dos dentes, com orientações e proteções para aliviar desconfortos e preservar suas estruturas.", ["Avaliação de sinais", "Proteção do sorriso", "Cuidado contínuo"]],
+  ["Disfunção da ATM", "Investigação cuidadosa dos desconfortos na articulação da mandíbula, buscando entender causas e indicar o melhor caminho para mais qualidade de vida.", ["Avaliação especializada", "Planejamento individual", "Acompanhamento da evolução"]],
+  ["Facetas em resina e estética dental", "Transformações sutis que respeitam a naturalidade do seu sorriso, com decisões conscientes e indicação baseada em avaliação clínica.", ["Planejamento individual", "Resultados naturais", "Abordagem conservadora"]],
+  ["Próteses e reabilitação oral", "Recuperação da função e estética do sorriso com soluções personalizadas, respeitando seu ritmo e suas necessidades.", ["Avaliação completa", "Soluções personalizadas", "Acompanhamento pós-procedimento"]],
+  ["Cirurgias e implantes", "Procedimentos cirúrgicos conduzidos com planejamento, explicação clara de cada etapa e cuidado para que você se sinta seguro.", ["Planejamento detalhado", "Explicação de cada etapa", "Acompanhamento pós-cirúrgico"]],
+  ["Restaurações", "Reparo de dentes com atenção à estética e à função, usando materiais e técnicas que buscam um resultado discreto e duradouro.", ["Avaliação do dente afetado", "Materiais de qualidade", "Acabamento natural"]],
+  ["Ortodontia", "Alinhamento do sorriso com acompanhamento regular, explicação das etapas e respeito ao tempo do seu tratamento.", ["Avaliação ortodôntica", "Planejamento do tratamento", "Acompanhamento periódico"]],
+  ["Alinhador invisível", "Opção discreta para quem busca corrigir a posição dos dentes com mais liberdade visual e conforto no dia a dia.", ["Avaliação de viabilidade", "Planejamento digital", "Acompanhamento do progresso"]],
+  ["Odontologia do sono (ronco e apneia)", "Avaliação de sinais de ronco e apneia, com orientações e dispositivos que podem melhorar sua respiração e qualidade de sono.", ["Avaliação dos sinais", "Indicação de dispositivos", "Acompanhamento da adaptação"]],
+  ["Harmonização facial", "Procedimentos estéticos minimamente invasivos para valorizar seus traços de forma natural, sempre com indicação individualizada.", ["Avaliação facial", "Indicação personalizada", "Resultados sutis"]],
+  ["Atendimento odontológico domiciliar", "Cuidado odontológico no conforto da sua casa para quem tem dificuldade de deslocamento ou prefere ser atendido em ambiente familiar.", ["Atendimento humanizado", "Conforto do lar", "Agendamento flexível"]],
 ];
-function Servicos(){return <><PageIntro eyebrow="Serviços" title="Cuidamos do seu sorriso de forma completa." text="Da prevenção à reabilitação, da estética ao atendimento em casa, nossas escolhas partem da escuta, de uma avaliação cuidadosa e do respeito ao que você realmente precisa."/><section><div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28"><div className="space-y-4">{items.map(([title,text,points],i)=><article key={title as string} className="grid gap-6 border-b border-border py-10 md:grid-cols-[80px_0.8fr_1.2fr] md:gap-10"><span className="font-display text-3xl text-earth">0{i+1}</span><h2 className="text-3xl text-primary md:text-4xl">{title as string}</h2><div><p className="leading-7 text-muted-foreground">{text as string}</p><ul className="mt-5 grid gap-2 sm:grid-cols-3">{(points as string[]).map(p=><li className="flex items-center gap-2 text-xs font-semibold text-ink-soft" key={p}><Check className="size-4 text-sage"/>{p}</li>)}</ul></div></article>)}</div><p className="mt-8 text-sm text-muted-foreground">A indicação de qualquer tratamento depende de avaliação presencial e pode variar de pessoa para pessoa.</p></div></section><FinalCta title="Qual cuidado faz sentido para você agora?"/></>}
+
+function Servicos() {
+  return (
+    <>
+      <PageIntro
+        eyebrow="Serviços"
+        title="Cuidamos do seu sorriso de forma completa."
+        text="Da prevenção à reabilitação, da estética ao atendimento em casa, nossas escolhas partem da escuta, de uma avaliação cuidadosa e do respeito ao que você realmente precisa."
+      />
+      <section className="bg-background">
+        <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {items.map(([title, text, points], i) => (
+              <article
+                key={title as string}
+                className="group relative flex flex-col overflow-hidden rounded-[2rem] bg-cream p-7 shadow-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-xl md:p-8"
+              >
+                <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-sage-soft/50 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="relative">
+                  <div className="flex items-start justify-between gap-4">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-sage-soft font-display text-xl text-earth">
+                      0{i + 1}
+                    </span>
+                    <div className="h-2 w-2 rounded-full bg-sage/60" />
+                  </div>
+                  <h2 className="mt-6 text-2xl leading-tight text-primary md:text-[1.65rem]">
+                    {title as string}
+                  </h2>
+                  <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                    {text as string}
+                  </p>
+                  <ul className="mt-6 grid gap-2.5">
+                    {(points as string[]).map((p) => (
+                      <li
+                        className="flex items-center gap-2.5 text-xs font-semibold text-ink-soft"
+                        key={p}
+                      >
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sage/15">
+                          <Check className="size-3 text-sage" />
+                        </span>
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p className="mt-10 text-center text-sm text-muted-foreground">
+            A indicação de qualquer tratamento depende de avaliação presencial e pode variar de pessoa para pessoa.
+          </p>
+        </div>
+      </section>
+      <FinalCta title="Qual cuidado faz sentido para você agora?" />
+    </>
+  );
+}
