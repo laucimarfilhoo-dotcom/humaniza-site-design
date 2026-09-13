@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, MapPin, Menu, X } from "lucide-react";
+import { Instagram, MapPin, Menu, MessageCircle, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { BrandMark } from "./brand-mark";
 import { Button } from "./ui/button";
@@ -31,7 +31,7 @@ export function SiteChrome({ children }: { children: ReactNode }) {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.2fr_1fr_1fr] md:px-8 md:py-18">
         <div><BrandMark /><p className="mt-5 max-w-sm text-sm leading-7 text-primary-foreground/75">Odontologia leve, gentil e preventiva. Um cuidado que começa pela escuta.</p></div>
         <div><p className="text-xs font-bold uppercase tracking-[0.18em]">Encontre-nos</p><p className="mt-4 flex gap-2 text-sm leading-6 text-primary-foreground/75"><MapPin className="mt-0.5 size-4 shrink-0" /> Humberto Santana Business<br/>Aldeota, Fortaleza — CE<br/>CEP 60135-270</p></div>
-        <div><p className="text-xs font-bold uppercase tracking-[0.18em]">Acompanhe</p><a className="mt-4 inline-flex items-center gap-2 text-sm text-primary-foreground/75 hover:text-primary-foreground" href="https://instagram.com/humanizaodontofortaleza" target="_blank" rel="noreferrer"><Instagram className="size-4" /> Instagram</a></div>
+        <div><p className="text-xs font-bold uppercase tracking-[0.18em]">Acompanhe</p><a className="mt-4 inline-flex items-center gap-2 text-sm text-primary-foreground/75 hover:text-primary-foreground" href="https://instagram.com/humanizaodontofortaleza" target="_blank" rel="noreferrer"><Instagram className="size-4" /> Instagram</a><a className="mt-3 inline-flex items-center gap-2 text-sm text-primary-foreground/75 hover:text-primary-foreground" href={bookingUrl} target="_blank" rel="noreferrer"><MessageCircle className="size-4" /> WhatsApp</a></div>
       </div>
       <div className="border-t border-primary-foreground/15 px-5 py-5 text-center text-xs text-primary-foreground/55">© 2026 Humaniza Clínica. Informações gerais não substituem avaliação profissional.</div>
     </footer>
