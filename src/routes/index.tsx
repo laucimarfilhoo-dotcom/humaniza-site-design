@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, HeartHandshake, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowRight, Check, HeartHandshake, ShieldCheck, Sparkles } from "lucide-react";
 const clinic = "/humaniza-consultorio.jpg";
 import { Button } from "@/components/ui/button";
 import { bookingUrl } from "@/components/site-chrome";
