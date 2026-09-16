@@ -23,7 +23,9 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { property: "og:image", content: "https://humanizaclinica.vercel.app/humaniza-social.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://humanizaclinica.vercel.app/humaniza-social.jpg" },
       { name: "twitter:title", content: "Dentista na Aldeota, Fortaleza | Humaniza Clínica" },
       {
         name: "twitter:description",
