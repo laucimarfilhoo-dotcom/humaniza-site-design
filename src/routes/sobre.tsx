@@ -4,9 +4,9 @@ import { FramedImage } from "@/components/framed-image";
 import { FinalCta, PageIntro, SectionTitle } from "@/components/page-elements";
 
 export const Route = createFileRoute("/sobre")({ head: () => ({ meta: [
-  { title: "Sobre a Humaniza Clínica | Fortaleza" }, { name: "description", content: "Conheça a filosofia de atendimento acolhedor e preventivo da Humaniza Clínica, na Aldeota, em Fortaleza." },
-  { property: "og:title", content: "Sobre a Humaniza Clínica" }, { property: "og:description", content: "Escuta, clareza e respeito ao seu ritmo em cada consulta." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
-] }), component: Sobre });
+  { title: "Sobre a Humaniza | Dentistas na Aldeota, Fortaleza" }, { name: "description", content: "Conheça a equipe e a filosofia de odontologia humanizada da Humaniza Clínica, na Aldeota, em Fortaleza — CE. Agende sua consulta." },
+  { property: "og:title", content: "Sobre a Humaniza Clínica | Aldeota, Fortaleza" }, { property: "og:description", content: "Escuta, clareza e respeito ao seu ritmo em cada consulta, em Fortaleza." }, { property: "og:type", content: "website" }, { property: "og:url", content: "/sobre" }, { name: "twitter:card", content: "summary_large_image" }, { name: "twitter:title", content: "Sobre a Humaniza Clínica | Aldeota, Fortaleza" }, { name: "twitter:description", content: "Odontologia humanizada com equipe especializada em Fortaleza." },
+], links: [{ rel: "canonical", href: "/sobre" }], scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Início", item: "/" }, { "@type": "ListItem", position: 2, name: "Sobre", item: "/sobre" }] }) }] }), component: Sobre });
 const team = [
   { name: "Dra. Sandra Nogueira", role: "Cirurgiã-Dentista", areas: ["Bruxismo", "DTM", "Clareamento", "Prevenção", "Resinas", "Prótese"], photo: "/equipe-sandra.jpg" },
   { name: "Dr. Aloísio Ribeiro", role: "Cirurgião-Dentista", areas: ["Próteses", "Implantes", "Laminados", "Cirurgias"], photo: "/equipe-aloisio.jpg" },
