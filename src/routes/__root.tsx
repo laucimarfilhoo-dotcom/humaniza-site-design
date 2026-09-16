@@ -78,12 +78,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Humaniza Clínica" },
-      { name: "description", content: "Odontologia leve, gentil e preventiva em Fortaleza." },
+      { title: "Humaniza Clínica | Dentista na Aldeota, Fortaleza" },
+      {
+        name: "description",
+        content:
+          "Clínica odontológica na Aldeota, em Fortaleza. Odontologia humanizada, gentil e preventiva. Agende sua consulta pelo WhatsApp.",
+      },
       { name: "author", content: "Humaniza Clínica" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "geo.region", content: "BR-CE" },
+      { name: "geo.placename", content: "Fortaleza, Aldeota" },
+      { property: "og:site_name", content: "Humaniza Clínica" },
+      { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -94,6 +102,50 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "/#website",
+              name: "Humaniza Clínica",
+              inLanguage: "pt-BR",
+              publisher: { "@id": "/#organization" },
+            },
+            {
+              "@type": ["Organization", "Dentist", "LocalBusiness"],
+              "@id": "/#organization",
+              name: "Humaniza Clínica",
+              description:
+                "Clínica odontológica humanizada na Aldeota, em Fortaleza — CE, com atendimento gentil, preventivo e sem pressa.",
+              url: "/",
+              logo: "/humaniza-logo.png",
+              image: "/humaniza-consultorio.jpg",
+              telephone: "+5585992818015",
+              priceRange: "$$",
+              currenciesAccepted: "BRL",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Humberto Santana Business",
+                addressLocality: "Fortaleza",
+                addressRegion: "CE",
+                postalCode: "60135-270",
+                addressCountry: "BR",
+              },
+              areaServed: [
+                { "@type": "City", name: "Fortaleza" },
+                { "@type": "AdministrativeArea", name: "Aldeota, Fortaleza - CE" },
+              ],
+              medicalSpecialty: "Dentistry",
+              sameAs: ["https://instagram.com/humanizaodontofortaleza"],
+            },
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
