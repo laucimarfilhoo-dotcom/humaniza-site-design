@@ -5,19 +5,39 @@ import { FinalCta, PageIntro, SectionTitle } from "@/components/page-elements";
 export const Route = createFileRoute("/resultados")({
   head: () => ({
     meta: [
-      { title: "Resultados e Experiências | Humaniza Clínica" },
+      { title: "Depoimentos de Pacientes | Humaniza Fortaleza" },
       {
         name: "description",
         content:
-          "Depoimentos reais e resultados odontológicos conduzidos com planejamento, naturalidade e consentimento na Humaniza Clínica.",
+          "Depoimentos reais de pacientes da Humaniza Clínica, na Aldeota, em Fortaleza. Resultados odontológicos com planejamento e consentimento.",
       },
-      { property: "og:title", content: "Resultados | Humaniza Clínica" },
+      { property: "og:title", content: "Depoimentos de pacientes | Humaniza Clínica Fortaleza" },
       {
         property: "og:description",
-        content: "Depoimentos reais, resultados responsáveis e experiências acolhedoras.",
+        content: "Relatos reais de quem viveu o cuidado gentil da Humaniza, em Fortaleza.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/resultados" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Depoimentos de pacientes | Humaniza Clínica" },
+      {
+        name: "twitter:description",
+        content: "Relatos reais de pacientes atendidos na Aldeota, em Fortaleza.",
+      },
+    ],
+    links: [{ rel: "canonical", href: "/resultados" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Início", item: "/" },
+            { "@type": "ListItem", position: 2, name: "Resultados", item: "/resultados" },
+          ],
+        }),
+      },
     ],
   }),
   component: Resultados,
