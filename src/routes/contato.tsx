@@ -7,20 +7,35 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Agendamento | Humaniza Clínica Fortaleza" },
+      { title: "Contato e Localização | Dentista na Aldeota" },
       {
         name: "description",
         content:
-          "Agende sua consulta na Humaniza Clínica, no Humberto Santana Business, Aldeota, Fortaleza.",
+          "Agende sua consulta odontológica na Humaniza Clínica, na Aldeota, Fortaleza. Fale pelo WhatsApp (85) 99281-8015 e veja como chegar.",
       },
-      { property: "og:title", content: "Agende na Humaniza Clínica" },
+      { property: "og:title", content: "Contato e localização | Humaniza Clínica Fortaleza" },
       {
         property: "og:description",
-        content: "Fale com a equipe e encontre um horário para cuidar do seu sorriso.",
+        content: "Fale com nossa equipe e agende seu atendimento odontológico na Aldeota.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/contato" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Contato e localização | Humaniza Clínica" },
+      { name: "twitter:description", content: "Dentista na Aldeota, Fortaleza. Agende pelo WhatsApp." },
     ],
+    links: [{ rel: "canonical", href: "/contato" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Início", item: "/" },
+          { "@type": "ListItem", position: 2, name: "Contato", item: "/contato" },
+        ],
+      }),
+    }],
   }),
   component: Contato,
 });
