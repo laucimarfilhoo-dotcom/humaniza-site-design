@@ -33,8 +33,8 @@ export const Route = createFileRoute("/resultados")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Início", item: "/" },
-            { "@type": "ListItem", position: 2, name: "Resultados", item: "/resultados" },
+            { "@type": "ListItem", position: 1, name: "Início", item: "https://humanizaclinica.vercel.app/" },
+            { "@type": "ListItem", position: 2, name: "Resultados", item: "https://humanizaclinica.vercel.app/resultados" },
           ],
         }),
       },

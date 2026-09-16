@@ -55,8 +55,8 @@ export const Route = createFileRoute("/servicos")({
             {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Início", item: "/" },
-                { "@type": "ListItem", position: 2, name: "Serviços", item: "/servicos" },
+                { "@type": "ListItem", position: 1, name: "Início", item: "https://humanizaclinica.vercel.app/" },
+                { "@type": "ListItem", position: 2, name: "Serviços", item: "https://humanizaclinica.vercel.app/servicos" },
               ],
             },
             {
@@ -70,7 +70,7 @@ export const Route = createFileRoute("/servicos")({
                   name,
                   alternateName: local,
                   description,
-                  provider: { "@id": "/#organization" },
+                  provider: { "@id": "https://humanizaclinica.vercel.app/#organization" },
                   areaServed: { "@type": "City", name: "Fortaleza" },
                 },
               })),
